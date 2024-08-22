@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>Quix Hub</title>
+</head>
+<body>
+
+<style>
+    *{
+    box-sizing: border-box;
+    background-color: black !important;
+}
+#logo{
+    height: 50px;
+}
+nav{
+    background-color: black !important;
+    box-shadow: 0 0 10px rgb(91, 91, 91);
+    width: 100%;
+}
+
+.btn-feed button{
+    margin-right: 0 !important;
+}
+
+.Home-hub{
+    background-color: black !important;
+    width: 100%;
+    height: 100vh;
+}
+.row1{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    color: aliceblue;
+}
+.row2{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    color: aliceblue;
+}
+.row2 h5{
+    color: crimson;
+}
+.row1 h5{
+    color: rgb(40, 220, 20);
+}
+.Home-hub h1{
+    color: rgb(206, 206, 206);
+    text-shadow: 10px 1px 20px gray;
+}
+footer,.foot, footer div, footer div p, footer div section,footer div a {
+    background-color: rgb(14, 14, 14) !important;
+}
+
+.text1{
+    display: flex;
+}
+#fd1{
+    color: brown;
+}
+#fd2{
+    color: rgb(213, 168, 20);
+}
+#fd3{
+    color: rgb(0, 223, 7);
+}
+</style>    
+
+<header class="head">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img id="logo" src="background.jpg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="feedback.html">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<section class="Home-hub py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Welcome to Quix Hub</h1>
+            <p class="lead text-muted">Your go-to destination for fun, interactive quizzes that challenge your knowledge and spark your curiosity. Dive into a world of questions and elevate your learning experience!</p>
+            <p>
+            <a href="#mpdules" class="btn btn-primary my-2">Go to Modules</a>
+            <a href="contact.html" class="btn btn-secondary my-2">Add New Quiz</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="Hub-modules" id="mpdules">
+    <div class="container row row1 m-auto">
+        <div class="card" style="width: 18rem;">
+            <img src="two.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Python Quiz</h5>
+                <p class="card-text">Sharpen your Python skills with Quix Hub's quiz. From basics to advanced, boost your coding confidence and master your craft. Ready to code?<p>
+                <a href="python.html" class="btn btn-primary">Go to Quiz</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="two2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Web Development</h5>
+                <p class="card-text">Boost your web development skills with Quix Hub's quiz. Test your knowledge from HTML to JavaScript, and elevate your coding game.</p>
+                <a href="webdevelopment.html" class="btn btn-primary">Go to Quiz</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="three.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">JavaScript</h5>
+                <p class="card-text">Boost your JavaScript skills with Quix Hub's quiz. Tackle basics to advanced topics and elevate your coding confidence. Ready to script success?</p>
+                <a href="javascript.html" class="btn btn-primary">Go to Quiz</a>
+            </div>
+        </div>
+    </div>
+    <div class="row container m-auto row2">
+        <div class="card" style="width: 18rem;">
+            <img src="pendding.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Pendding Quiz</h5>
+                <p class="card-text">Get ready! Your quiz is waiting. Continue where you left off and see how far you can go. Challenge yourself to complete the quiz and test your knowledge to the fullest!</p>
+                <a href="#" class="btn btn-primary">Pendding...</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="pendding.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Pendding Quiz</h5>
+                <p class="card-text">Get ready! Your quiz is waiting. Continue where you left off and see how far you can go. Challenge yourself to complete the quiz and test your knowledge to the fullest!</p>
+                <a href="#" class="btn btn-primary">Pendding...</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="pendding.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Pendding Quiz</h5>
+                <p class="card-text">Get ready! Your quiz is waiting. Continue where you left off and see how far you can go. Challenge yourself to complete the quiz and test your knowledge to the fullest!</p>
+                <a href="#" class="btn btn-primary">Pendding...</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+<div class="container my-5">
+    <footer class="text-center text-white">
+      <div class="container ">
+        <section class="mb-5">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8 mt-5">
+              <p>
+                Your ultimate destination for engaging and interactive quizzes that challenge your knowledge and spark your curiosity. Dive into a diverse range of questions and elevate your learning experience while having fun!
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="text-center mb-5">
+            <a href="https://www.instagram.com/___zcl3_/" class="text-white me-4 mr-2">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/developer-shaheen/" class="text-white me-4 mr-1">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="text-white me-4">
+                <a href="https://github.com/Mscode04" class="text-white me-4 ">
+                <i class="fab fa-github"></i>
+            </a>
+        </section>
+    </div>
+    <div
+        class="text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2024 Copyright:
+        <a class="text-white" href="main.html">Quix Hub</a>
+    </div>
+    </footer>
+  </div>
+</footer>
+<script src="/assets/js/main.js" ></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://kit.fontawesome.com/a34eb846e5.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>      
+</body>
+</html>

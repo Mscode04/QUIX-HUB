@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Code Quiz Login</title>
+</head>
+
+<style>
+    *{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: black;
+
+}
+.main-site{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+.background-img img{
+    height: 300px;
+    background-color: black;
+}
+.main-body{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    height: 100%;
+    width: 120%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 80%;
+    color: aliceblue;
+    height: 1%;
+    border: 0.1px solid rgb(49, 49, 49);
+    background-color: black;
+    border-radius: 6px;
+    padding: 3%;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#btn1{
+    color: rgb(102, 102, 102);
+    padding: 8px;
+    background-color: rgb(26, 26, 26);
+    border: 0;
+    border-radius: 10px;
+    width: 50%;
+}
+</style>
+
+
+
+<body>
+<div class="main-site">
+    <div class="row body-main">
+        <div class="background-img col-md-6 col-sm-12 xs-12">
+            <img src="background.jpg" alt="">
+        </div>
+        <div class="box col-md-6 col-sm-12 xs-12">
+            <input type="email" class="mb-2" id="mail" placeholder="Email">
+            <input type="password" class="mb-3" id="pass" placeholder="password">
+            <button id="btn1" onclick='submitLogin()'>Submit</button>
+            <h1 class="mt-2">Code Quiz</h1>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    
+function submitLogin() {
+    const email = document.getElementById('mail').value;
+    const password = document.getElementById('pass').value;
+
+    if (email === '' || password === '') {
+        alert('Please fill');
+    } 
+    else if(email === 'ms.shaheenkp@gmail.com' && password === '12345678') {
+        window.location.href = "main.html";
+    }
+    else {
+        alert('No Cheating');
+    }
+}
+</script>
+<script src="/assets/js/main.js" ></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://kit.fontawesome.com/a34eb846e5.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>    
+</body>
+</html>

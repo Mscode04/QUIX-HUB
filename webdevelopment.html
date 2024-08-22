@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/webdevelopment.css">
+    <title>Quix Web Development</title>
+</head>
+
+<style>
+    
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #171717;
+    color: #ddd;
+}
+
+header{
+    height: auto;
+    width: 100%;
+    background-color: black;
+    box-shadow: 0 0 10px rgb(77, 77, 77);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    padding: 15px;
+}
+
+.nav-main{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.body-quiz-py{
+    padding-top: 10%;
+    width: 100%;
+    background-image: url(bg-web.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #F8FAFD;
+}
+
+.question-box{
+    background-color: rgba(30, 32, 103, 0.849);
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.result button {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    background-color: #003b93;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.result h1 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+.result{
+    height: 500px;
+}
+@media (width < 768px) and (width > 670px) {
+    .question-box {
+        width: 100%;
+    }
+    .nav-main h3 {
+        font-size: 26px;
+    }
+    .nav-main div h6 {
+        font-size: 16px;
+    }
+    .body-quiz-py{
+        padding-top: 20%;
+    }
+}
+
+@media (width > 480px) and (width < 670px) {
+    .nav-main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-main h3 {
+        font-size: 26px;
+    }
+    .nav-main div h6 {
+        font-size: 16px;
+    }
+    .result button {
+        width: 80%;
+    }
+    .body-quiz-py{
+        padding-top: 35%;
+    }
+}
+@media (width<490px) {
+    .nav-main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-main h3 {
+        font-size: 26px;
+    }
+    .nav-main div h6 {
+        font-size: 16px;
+    }
+    .result button {
+        width: 80%;
+    }
+    .body-quiz-py{
+        padding-top: 55%;
+    }
+}
+#result1{
+    color: #4CAF50;
+    margin-top:30px;
+}
+#result12{
+    color: #4CAF50;
+    margin-top:30px;
+}
+#result2{
+    color: #d7c907;
+    margin-top:30px;
+}
+#result22{
+    color: #c7bb15;
+    margin-top:30px;
+}
+#result3{
+    color: #c82f11;
+    margin-top:30px;
+}
+#result33{
+    color: #c82f11;
+    margin-top:30px;
+}
+</style>
+
+<body>
+<header>
+    <nav class="nav-main">
+        <h3 class="p-3 text-white">Web Development</h3>
+        <div class="d-flex align-items-center">
+            <a href="main.html"><button id="home button" style="background-color: rgba(27, 27, 27, 0); color: aliceblue; border:0; border-radius: 10px; padding: 3px;"><i class="fa-solid fa-house"></i></button></a>
+            <h6 class="p-3 text-primary">Questions: 10</h6>
+            <h6 class="p-3 text-primary">Total Score: 10</h6>
+            <h6 class="p-3 text-primary" id="timer">00</h6>
+        </div>
+    </nav>
+</header>
+<section class="body-quiz-py">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="question-box col-lg-5 col-md-6 col-sm-10 col-xs-12 m-4">
+                <p>1. Which of the following is the correct file extension for HTML files?</p>
+                <input type="radio" name="q1" id="q1a" value="a">
+                <label for="q1a">A) .htm</label><br>
+                <input type="radio" name="q1" id="q1b" value="b">
+                <label for="q1b">B) .html</label><br>
+                <input type="radio" name="q1" id="q1c" value="c">
+                <label for="q1c">C) .htl</label><br>
+                <input type="radio" name="q1" id="q1d" value="d">
+                <label for="q1d">D) .htlm</label><br>
+            </div>
+            
+            <div class="question-box col-lg-5 col-md-6 col-sm-10 col-xs-12 m-4">
+                <p>2. Which HTML tag is used to define an internal style sheet?</p>
+                <input type="radio" name="q2" id="q2a" value="a">
+                <label for="q2a">A) &lt;style&gt;</label><br>
+                <input type="radio" name="q2" id="q2b" value="b">
+                <label for="q2b">B) &lt;script&gt;</label><br>
+                <input type="radio" name="q2" id="q2c" value="c">
+                <label for="q2c">C) &lt;css&gt;</label><br>
+                <input type="radio" name="q2" id="q2d" value="d">
+                <label for="q2d">D) &lt;link&gt;</label><br>
+            </div>
+            
+            <div class="question-box col-lg-5 col-md-6 col-sm-10 col-xs-12 m-4">
+                <p>3. Which of the following is not a valid HTML element?</p>
+                <input type="radio" name="q3" id="q3a" value="a">
+                <label for="q3a">A) &lt;div&gt;</label><br>
+                <input type="radio" name="q3" id="q3b" value="b">
+                <label for="q3b">B) &lt;span&gt;</label><br>
+                <input type="radio" name="q3" id="q3c" value="c">
+                <label for="q3c">C) &lt;section&gt;</label><br>
+                <input type="radio" name="q3" id="q3d" value="d">
+                <label for="q3d">D) &lt;widget&gt;</label><br>
+            </div>
+            
+            <div class="question-box col-lg-5 col-md-6 col-sm-10 col-xs-12 m-4">
+                <p>4. What does the 'color' property do in CSS?</p>
+                <input type="radio" name="q4" id="q4a" value="a">
+                <label for="q4a">A) Sets the background color of an element</label><br>
+                <input type="radio" name="q4" id="q4b" value="b">
+                <label for="q4b">B) Sets the text color of an element</label><br>
+                <input type="radio" name="q4" id="q4c" value="c">
+                <label for="q4c">C) Both A and B</label><br>
+                <input type="radio" name="q4" id="q4d" value="d">
+                <label for="q4d">D) None of the above</label><br>
+            </div>
+            
+            <div class="question-box col-lg-5 col-md-6 col-sm-10 col-xs-12 m-4">
+                <p>5. How do you add a comment in CSS?</p>
+                <input type="radio" name="q5" id="q5a" value="a">
+                <label for="q5a">A) // This is a comment</label><br>
+                <input type="radio" name="q5" id="q5b" value="b">
+                <label for="q5b">B) /* This is a comment */</label><br>
+                <input type="radio" name="q5" id="q5c" value="c">
+                <label for="q5c">C) # This is a comment</label><br>
+                <input type="radio" name="q5" id="q5d" value="d">
+                <label for="q5d">D) None of the above</label><br>
+            </div>
+            
+            <div class="question-box col-lg-5 col-md-6 col-sm-10 col-xs-12 m-4">
+                <p>6. Which of the following is a CSS framework?</p>
+                <input type="radio" name="q6" id="q6a" value="a">
+                <label for="q6a">A) Bootstrap</label><br>
+                <input type="radio" name="q6" id="q6b" value="b">
+                <label for="q6b">B) React</label><br>
+                <input type="radio" name="q6" id="q6c" value="c">
+                <label for="q6c">C) Django</label><br>
+                <input type="radio" name="q6" id="q6d" value="d">
+                <label for="q6d">D) Laravel</label><br>
+            </div>
+            
+            <div class="question-box col-lg-5 col-md-6 col-sm-10 col-xs-12 m-4">
+                <p>7. What is the purpose of the 'display' property in CSS?</p>
+                <input type="radio" name="q7" id="q7a" value="a">
+                <label for="q7a">A) To control the visibility of an element</label><br>
+                <input type="radio" name="q7" id="q7b" value="b">
+                <label for="q7b">B) To control the flow and layout of an element</label><br>
+                <input type="radio" name="q7" id="q7c" value="c">
+                <label for="q7c">C) To control the font style of text</label><br>
+                <input type="radio" name="q7" id="q7d" value="d">
+                <label for="q7d">D) None of the above</label><br>
+            </div>
+            
+            <div class="question-box col-lg-5 col-md-6 col-sm-10 col-xs-12 m-4">
+                <p>8. Which of the following CSS properties can be used to center-align text within an element?</p>
+                <input type="radio" name="q8" id="q8a" value="a">
+                <label for="q8a">A) text-align: center;</label><br>
+                <input type="radio" name="q8" id="q8b" value="b">
+                <label for="q8b">B) margin: auto;</label><br>
+                <input type="radio" name="q8" id="q8c" value="c">
+                <label for="q8c">C) float: center;</label><br>
+                <input type="radio" name="q8" id="q8d" value="d">
+                <label for="q8d">D) align: center;</label><br>
+            </div>
+            
+            <div class="question-box col-lg-5 col-md-6 col-sm-10 col-xs-12 m-4">
+                <p>9. How do you link a CSS file to an HTML document?</p>
+                <input type="radio" name="q9" id="q9a" value="a">
+                <label for="q9a">A) &lt;link rel="stylesheet" href="style.css"&gt;</label><br>
+                <input type="radio" name="q9" id="q9b" value="b">
+                <label for="q9b">B) &lt;script src="style.css"&gt;&lt;/script&gt;</label><br>
+                <input type="radio" name="q9" id="q9c" value="c">
+                <label for="q9c">C) &lt;style src="style.css"&gt;&lt;/style&gt;</label><br>
+                <input type="radio" name="q9" id="q9d" value="d">
+                <label for="q9d">D) &lt;css src="style.css"&gt;&lt;/css&gt;</label><br>
+            </div>
+            
+            <div class="question-box col-lg-5 col-md-6 col-sm-10 col-xs-12 m-4">
+                <p>10. What does the 'float' property do in CSS?</p>
+                <input type="radio" name="q10" id="q10a" value="a">
+                <label for="q10a">A) It positions an element to the left or right of its container</label><br>
+                <input type="radio" name="q10" id="q10b" value="b">
+                <label for="q10b">B) It clears the content around an element</label><br>
+                <input type="radio" name="q10" id="q10c" value="c">
+                <label for="q10c">C) It hides the element</label><br>
+                <input type="radio" name="q10" id="q10d" value="d">
+                <label for="q10d">D) It makes an element responsive</label><br>
+            </div>
+        </div>
+        <div class="result text-center mt-4">
+            <button onclick="submitQuiz()" class="btn btn-success">Submit</button>
+            <h1 id="result1"></h1>
+            <h1 id="result12"></h1>
+            <h1 id="result2"></h1>
+            <h1 id="result22"></h1>
+            <h1 id="result3"></h1>
+            <h1 id="result33"></h1>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container my-5">
+        <footer class="text-center text-white">
+            <div class="container ">
+            <section class="mb-3">
+                <div class="row d-flex justify-content-center">
+                <div class="col-lg-8 mt-5">
+                    <p>
+                        learning experience while having fun!
+                    </p>
+                </div>
+                </div>
+            </section>
+            <section class="text-center mb-3">
+                <a href="https://www.instagram.com/___zcl3_/" class="text-white me-4 mr-2">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/developer-shaheen/" class="text-white me-4 mr-1">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <a href="https://github.com/Mscode04" class="text-white me-4 ">
+                    <i class="fab fa-github"></i>
+                </a>
+            </section>
+        </div>
+        <div
+            class="text-center p-3"
+            style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2024 Copyright:
+            <a class="text-white" href="main.html">Quix Hub</a>
+        </div>
+        </footer>
+        </div>
+    </footer>
+
+<script>
+    function bad(){
+    document.getElementById('fd2').innerHTML=" "
+    document.getElementById('fd3').innerHTML=" "
+    document.getElementById('fd1').innerHTML="Thanks for the feedback! I'll make the changes. Let me know if you have any other suggestions."
+}
+function avg(){
+    document.getElementById('fd1').innerHTML=" "
+    document.getElementById('fd3').innerHTML=" "
+    document.getElementById('fd2').innerHTML="Thanks for the feedback! I'll make the changes. Let me know if you have any other suggestions."
+}
+function good(){
+    document.getElementById('fd2').innerHTML=" "
+    document.getElementById('fd1').innerHTML=" "
+    document.getElementById('fd3').innerHTML="Thanks for the feedback! I'll make the changes. Let me know if you have any other suggestions."
+}
+
+let global = 300;
+let flag = 0;
+function submitQuiz() {
+    if (flag == 0) {
+        const Answers = ['b', 'a', 'd', 'b', 'b', 'a', 'b', 'a', 'a', 'a'];
+        let user = [];
+        for (let i = 1; i <= 10; i++) {
+            let radios = document.getElementsByName(`q${i}`);
+            for (let radio of radios) {
+                if (radio.checked) {
+                    user.push(radio.value);
+                    break;
+                }
+            }
+        }
+        let score = 0;
+        for (let i = 0; i < Answers.length; i++) {
+            if (user[i] === Answers[i]) {
+                score++;
+            }
+        }
+        if (score >= 8) {
+            document.getElementById("result1").innerText = `You scored ${score} out of 10.`;
+            let per = (score / 10) * 100;
+            document.getElementById("result12").innerText = `You Got  ${per} %.`;
+            flag =1 ;
+        } 
+        else if (score >= 5) {
+            document.getElementById("result2").innerText = `You scored ${score} out of 10.`;
+            let per = (score / 10) * 100;
+            document.getElementById("result22").innerText = `You Got  ${per} %.`;
+            flag =1 ;
+        } 
+        else if (score < 5) {
+            document.getElementById("result3").innerText = `You scored ${score} out of 10.`;
+            let per = (score / 10) * 100;
+            document.getElementById("result33").innerText = `You Got  ${per} %.`;
+            flag =1 ;
+        }
+        
+    }
+}
+
+window.addEventListener('load', function() {
+    console.log("Page is reloaded!");
+    xyz(global);
+});
+
+function xyz(global) {
+    setInterval(function() {
+        if (global > 0) {
+            document.getElementById("timer").innerText = `Time Left  ${global - 1}`;
+            global = global - 1;
+        } 
+        else if (global === 0) {
+            out();
+        }
+    }, 1000);
+}
+function out() {
+    submitQuiz();
+}
+</script>    
+<script src="/assets/js/web.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://kit.fontawesome.com/a34eb846e5.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>      
+</body>
+</html>
